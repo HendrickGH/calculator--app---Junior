@@ -1,0 +1,225 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Strong cyan: hsl(172, 67%, 45%)
+
+### Neutral
+
+- Very dark cyan: hsl(183, 100%, 15%)
+- Dark grayish cyan: hsl(186, 14%, 43%)
+- Dark grayish cyan: hsl(184, 14%, 56%)
+- Light grayish cyan: hsl(185, 41%, 84%)
+- Light grayish cyan: hsl(189, 41%, 97%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (form inputs): 24px
+
+### Font
+
+- Family: [Space Mono](https://fonts.google.com/specimen/Space+Mono)
+- Weights: 400, 500, 700
+*/
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: 'Space Mono', monospace;
+	background-color: hsl(185, 41%, 84%);
+}
+.main {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 4.8rem;
+}
+.logo {
+	width: 6.4rem;
+}
+.container {
+	background-color: #fff;
+	width: 70rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	border-radius: 0.8rem;
+}
+.calc {
+	margin: 3.6rem;
+}
+.bill,
+.title {
+	color: #5e7a7d;
+	font-weight: 700;
+	font-size: 1rem;
+	margin-bottom: 0.6rem;
+	letter-spacing: 0.075px;
+}
+.container-many {
+	position: relative;
+}
+.container-input {
+	display: flex;
+	align-items: center;
+}
+.many-input {
+	text-align: end;
+	padding: 0.8rem 1.2rem 0.8rem 0;
+	background-color: #f4fafa;
+	color: #5e7a7d;
+	font-weight: 700;
+	border: none;
+	font-family: inherit;
+	flex: 1;
+}
+.many-input::placeholder {
+	color: inherit;
+}
+.many-icon {
+	position: absolute;
+	width: 0.8rem;
+	height: 1rem;
+	margin-left: 1.2rem;
+}
+.title {
+	margin-top: 2.4rem;
+}
+.container-box-tip {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1.2rem;
+	margin-bottom: 2.4rem;
+}
+.box-tip {
+	background-color: #00494d;
+	color: #f4fafa;
+	padding: 0.6rem;
+	font-size: 1.2rem;
+	cursor: pointer;
+	font-weight: 400;
+	border-radius: 0.4rem;
+}
+.box-tip--custom {
+	background-color: #f4fafa;
+	cursor: default;
+}
+.box-tip--custom input {
+	font-weight: 700;
+	color: #5e7a7d;
+	width: 8.5rem;
+	border: none;
+	outline: none;
+	background-color: inherit;
+	font-family: inherit;
+}
+.box-tip--custom input:focus {
+	box-shadow: 0 0 0 3px #00494d38;
+}
+.box-tip--custom input::placeholder {
+	color: inherit;
+}
+.tip {
+	text-align: center;
+	letter-spacing: 0.75px;
+}
+.results {
+	background-color: #00494d;
+	margin: 2.4rem;
+	border-radius: inherit;
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+}
+.box-container-results {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.results-title {
+	color: #f4fafa;
+	font-weight: 700;
+	font-size: 1.2rem;
+}
+.results-text {
+	color: #5e7a7d;
+	font-weight: 700;
+}
+.total {
+	color: #26c0ab;
+	font-weight: 700;
+	font-size: 3.6rem;
+}
+.reset {
+	align-self: end;
+	margin: 2.4rem;
+	padding: 0.8rem 0;
+	text-transform: uppercase;
+	font-family: inherit;
+	letter-spacing: 0.075px;
+	font-weight: 700;
+	cursor: pointer;
+	border: none;
+	border-radius: inherit;
+	background-color: #26c0ab;
+}
+/* EFFECTS WITH JS */
+.select.box-tip {
+	background-color: #26c0ab;
+	color: #00494d;
+}
+.empty .reset {
+	opacity: 0.1;
+	cursor: no-drop;
+}
+@media (max-width: 41em) {
+	.main {
+		align-items: stretch;
+		gap: 0;
+	}
+	.logo {
+		align-self: center;
+		margin: 2.4rem 0;
+		width: 9.2rem;
+	}
+	.container {
+		width: auto;
+		grid-template-columns: 1fr;
+		border-radius: 1.2rem;
+	}
+	.calc {
+		margin: 1.2rem 2.4rem;
+	}
+	.bill,
+	.title {
+		font-size: 1.2rem;
+	}
+	.container-box-tip {
+		grid-template-columns: 1fr 1fr;
+	}
+	.box-tip {
+		padding: 0.8rem;
+	}
+	.results {
+		margin: 0 1.2rem 1.2rem 1.2rem;
+	}
+}

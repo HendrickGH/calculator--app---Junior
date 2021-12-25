@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<script src="js/script.js" defer type="module"></script>
+
+		<title>Frontend Mentor | Tip calculator app</title>
+	</head>
+	<body>
+		<main class="main">
+			<img src="images/logo.svg" alt="Splitter Inc" class="logo" />
+			<div class="container">
+				<section class="calc">
+					<div class="container-many">
+						<p class="bill">Bill</p>
+						<div class="container-input">
+							<img
+								src="images/icon-dollar.svg"
+								alt="Dollar"
+								class="many-icon"
+							/>
+							<input type="text" placeholder="0" class="many-input" />
+						</div>
+					</div>
+					<h2 class="bill title">Select Tip %</h2>
+					<div class="container-box-tip">
+						<article class="box-tip">
+							<h3 class="tip">5%</h3>
+						</article>
+						<article class="box-tip select">
+							<h3 class="tip">10%</h3>
+						</article>
+						<article class="box-tip">
+							<h3 class="tip">15%</h3>
+						</article>
+						<article class="box-tip">
+							<h3 class="tip">25%</h3>
+						</article>
+						<article class="box-tip">
+							<h3 class="tip">50%</h3>
+						</article>
+						<article class="box-tip box-tip--custom">
+							<input type="text" class="tip tip-custom" placeholder="Custom" />
+						</article>
+					</div>
+					<div class="container-many">
+						<p class="bill">Number of People</p>
+						<div class="container-input">
+							<img
+								src="images/icon-person.svg"
+								alt="Pay for person"
+								class="many-icon"
+							/><input type="text" placeholder="0" class="many-input" />
+						</div>
+					</div>
+				</section>
+				<section class="empty results">
+					<div class="box-container-results">
+						<div class="container-results">
+							<p class="results-title">Tip Amount</p>
+							<p class="results-text">/ person</p>
+						</div>
+						<p class="total">$0.00</p>
+					</div>
+					<div class="box-container-results">
+						<div class="container-results">
+							<p class="results-title">Total</p>
+							<p class="results-text">/ person</p>
+						</div>
+						<p class="total">$0.00</p>
+					</div>
+					<button class="reset">Reset</button>
+				</section>
+			</div>
+		</main>
+	</body>
+</html>
